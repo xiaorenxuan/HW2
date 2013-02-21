@@ -4,30 +4,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-        Hourly Wage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for = "Wage">Hourly Wage</label>
         <asp:TextBox ID="HourWageTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
-        No. of hours work this week&nbsp;&nbsp;
+        <label for = "hours">No. of hours work this week</label>
         <asp:TextBox ID="NoOfHoursTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
-        Pre-tax deduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for = "preTax">Pre-tax deduction</label>
         <asp:TextBox ID="PreTaxTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
-        After tax deduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for = "afterTax">After tax deduction</label>
         <asp:TextBox ID="AfterTaxTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" Text="Calculate" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
         <asp:Button ID="Button2" runat="server" Text="Clear" />
         <br />
         <br />

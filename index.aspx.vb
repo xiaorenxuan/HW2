@@ -17,6 +17,14 @@ Partial Class index
         Dim preTax As Decimal = PreTaxTextBox.Text
         Dim afterTax As Decimal = AfterTaxTextBox.Text
 
+        'the procedure to calculate the netpay
+        Dim grossPay As Decimal = hours * wage
+        Dim taxableIncome As Decimal = grossPay - preTax
+        Dim taxes As Decimal = taxableIncome * 18%
+        Dim incomeAfterTax As Decimal = grossPay - taxes
+        Dim netPay As Decimal = incomeAfterTax - afterTax
 
+        'display result in the result label
+        resultLabel.Text = "Your net payment is $" & netPay.ToString("#,####.##")
     End Sub
 End Class
