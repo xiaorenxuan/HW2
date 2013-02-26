@@ -7,6 +7,8 @@ Partial Class index
         NoOfHoursTextBox.Text = ""
         PreTaxTextBox.Text = ""
         AfterTaxTextBox.Text = ""
+        resultLabel.Text = "Please enter the number"
+
     End Sub
 
     'handle the calculating net pay for the employee
@@ -18,13 +20,21 @@ Partial Class index
         Dim afterTax As Decimal = AfterTaxTextBox.Text
 
         'the procedure to calculate the netpay
-        Dim grossPay As Decimal = hours * wage
-        Dim taxableIncome As Decimal = grossPay - preTax
-        Dim taxes As Decimal = taxableIncome * 18%
-        Dim incomeAfterTax As Decimal = grossPay - taxes
-        Dim netPay As Decimal = incomeAfterTax - afterTax
+        Dim grossPay As Decimal
+        Dim taxableIncome As Decimal
+        Dim taxes As Decimal
+        Dim incomeAfterTax As Decimal
+        Dim netPay As Decimal
+
+        grossPay = hours * wage
+        taxableIncome = grossPay - preTax
+        taxes = taxableIncome * (18 / 100)
+        incomeAfterTax = grossPay - taxes
+        netPay = incomeAfterTax - afterTax
+
 
         'display result in the result label
         resultLabel.Text = "Your net payment is $" & netPay.ToString("#,####.##")
+
     End Sub
 End Class
